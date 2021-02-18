@@ -1,0 +1,116 @@
+//$primary: $blue !default;
+//$secondary: $gray-600 !default;
+//$success: $green !default;
+//$info: $cyan !default;
+//$warning: $yellow !default;
+//$danger: $red !default;
+//$light: #111;
+$dark: #111;
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@500&family=Roboto:wght@300&display=swap');
+@import "bootstrap/bootstrap";
+@import "line-icons.css";
+@import "font-awesome.min.css";
+@import "animate.min.css";
+
+.nav-link {
+    font-size: 1.2rem;
+    color: #e1e1e1 !important;
+    text-transform: uppercase;
+
+    &:after {
+        content: " •";
+        padding-left: 7px;
+    }
+}
+
+.clearfix {
+    &:after {
+        content: "" !important;
+    }
+
+    &:before {
+        content: "" !important;
+    }
+}
+
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Poppins', sans-serif;
+}
+
+hr {
+    width: 200px;
+    margin: 20px auto !important;
+    height: 1px !important;
+    background-color: gold !important;
+    text-align: center;
+    opacity: 1 !important;
+}
+
+.carousel-item {
+    img {
+        height: 40vw;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    &:after {
+        content: ' ';
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: url('../img/gridtile.png') repeat !important;
+        background-size: 2px 2px;
+    }
+
+}
+
+.multi-button {
+    height: 500px;
+    overflow: hidden;
+    cursor: pointer;
+
+    &:hover {
+        .hover-title-show {
+            position: relative;
+            margin-top: -100px !important;
+            background-color: #2d2d2d !important;
+            padding: 10px;
+            text-align: center;
+            color: gold;
+            width: 100%;
+            z-index: 1000;
+            opacity: 1;
+        }
+    }
+
+    .hover-title-show {
+        color: transparent;
+        text-align: center;
+        transition-duration: 300ms;
+        opacity: 0;
+    }
+}
+
+
+.background-icon {
+    border-radius: 50%;
+    text-align: center;
+    margin-left: 10px;
+    padding-top: 10px;
+    width: 70px;
+    height: 70px;
+}
