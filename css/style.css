@@ -8522,15 +8522,17 @@ hr {
 
 .slick-prev {
   z-index: 10000;
-  left: 100px !important; }
+  left: 5vw !important; }
   .slick-prev:before {
-    font-size: 80px !important; }
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 4vw !important; }
 
 .slick-next {
   z-index: 10000;
-  right: 100px !important; }
+  right: 6vw !important; }
   .slick-next:before {
-    font-size: 80px !important; }
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 4vw !important; }
 
 .multi-button {
   overflow: hidden;
