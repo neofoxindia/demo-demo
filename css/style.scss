@@ -1,26 +1,34 @@
-//$primary: $blue !default;
-//$secondary: $gray-600 !default;
-//$success: $green !default;
-//$info: $cyan !default;
-//$warning: $yellow !default;
-//$danger: $red !default;
-//$light: #111;
-$dark: #111;
+$primary: #1d3557;
+$secondary: #e5e5e5;
+$success: #2a9d8f;
+$info: #72efdd;
+$warning: #e9c46a;
+$danger: #e76f51;
+$light: #f7fff7;
+$dark: #161616;
+
 
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Poppins:wght@500&family=Roboto:wght@300&display=swap');
 @import "bootstrap/bootstrap";
 @import "line-icons.css";
 @import "font-awesome.min.css";
 @import "animate.min.css";
+@import "slick-theme";
+@import "slick";
+
 
 .nav-link {
     font-size: 1.2rem;
+    font-weight: 800;
     color: #e1e1e1 !important;
     text-transform: uppercase;
+    transition-duration: 1.4s;
+    white-space: nowrap;
 
-    &:after {
-        content: " •";
-        padding-left: 7px;
+    &:hover {
+        transform: scale(1.02);
+        color: gold;
+        transition-duration: 1.4s;
     }
 }
 
@@ -39,10 +47,6 @@ $dark: #111;
     font-family: 'Roboto', sans-serif;
 }
 
-p {
-    font-family: 'Open Sans', sans-serif;
-
-}
 
 h1, h2, h3, h4 {
     font-family: 'Poppins', sans-serif;
@@ -57,51 +61,91 @@ hr {
     opacity: 1 !important;
 }
 
-.carousel-item {
-    img {
-        height: 40vw;
-        object-fit: cover;
-        width: 100%;
+
+.slider-item {
+    height: 40vw;
+    background-size: cover;
+
+    &.first-slider {
+        background-image: url("../img/sliders/img1.jpg");
     }
 
-    &:after {
-        content: ' ';
-        display: block;
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        background: url('../img/gridtile.png') repeat !important;
-        background-size: 2px 2px;
+    &.second-slider {
+        background-image: url("../img/sliders/img2.jpg");
     }
+
+    &.third-slider {
+        background-image: url("../img/sliders/img3.jpg");
+    }
+
+    //img {
+    //    height: 30vw;
+    //    object-fit: cover;
+    //    width: 100%;
+    //
+    //    //&:after {
+    //    //    content: ' ';
+    //    //    display: block;
+    //    //    position: absolute;
+    //    //    left: 0;
+    //    //    right: 0;
+    //    //    top: 0;
+    //    //    bottom: 0;
+    //    //    background: url('../img/gridtile.png') repeat !important;
+    //    //    background-size: 2px 2px;
+    //    //}
+    //}
+
 
 }
 
+.slick-slider {
+    overflow: hidden;
+}
+
+.slick-prev {
+    z-index: 10000;
+    left: 100px !important;
+    &:before {
+        font-size: 80px !important;
+    }
+}
+
+.slick-next {
+    z-index: 10000;
+    right:100px !important;
+
+    &:before {
+        font-size: 80px !important;
+    }
+}
+
 .multi-button {
-    height: 500px;
     overflow: hidden;
     cursor: pointer;
 
     &:hover {
         .hover-title-show {
             position: relative;
-            margin-top: -100px !important;
-            background-color: #2d2d2d !important;
+            margin-top: -80px !important;
+            font-weight: bold;
+            color: black;
+            background-color: $secondary;
             padding: 10px;
             text-align: center;
-            color: gold;
             width: 100%;
             z-index: 1000;
             opacity: 1;
+            visibility: visible;
         }
     }
 
     .hover-title-show {
         color: transparent;
         text-align: center;
-        transition-duration: 300ms;
+        transition-duration: 200ms;
         opacity: 0;
+        visibility: hidden;
     }
 }
 
